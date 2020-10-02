@@ -34,4 +34,10 @@ def delete_all():
     sql = "DELETE FROM cities"
     run_sql(sql)
 
+def delete(id):
+    city = None
+    sql = "DELETE FROM cities WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)
+    
     

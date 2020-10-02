@@ -10,7 +10,7 @@ CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     city_name VARCHAR(255),
     visited BOOLEAN,
-    country_id INT REFERENCES countries(id)
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );
 
 -- INSERT INTO cities (city_name, visited) VALUES ('Helsinki', FALSE);

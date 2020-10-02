@@ -20,7 +20,14 @@ def select_all():
     return all_cities
 
 def select(id)
-    sql = 
+    city = None
+    sql = "SELECT * FROM cities WHERE id = %s"
+    values = [id]
+    result = run_sql(sql, values)
+
+    if result is not None:
+        city = City(result['name'], result['visited'], result['id'])
+    return city
 
 
 def delete_all():

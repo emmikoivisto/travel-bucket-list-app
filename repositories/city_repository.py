@@ -12,14 +12,14 @@ def save(city):
 
 def select_all():
     all_cities = []
-    sql = "SELECT * FROM cities
+    sql = "SELECT * FROM cities"
     results = run_sql(sql)
     for row in results:
         city = City(row['name'], row['visited'], row['id'])
         all_cities.append(city)
     return all_cities
 
-def select(id)
+def select(id):
     city = None
     sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
@@ -39,5 +39,5 @@ def delete(id):
     sql = "DELETE FROM cities WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)
-    
+
     

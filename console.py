@@ -14,6 +14,6 @@ city_repository.save(city2)
 city3 = City("Copenhagen", True)
 city_repository.save(city3)
 
-
+city_repository.select_all()
 
 pdb.set_trace()

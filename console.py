@@ -28,7 +28,7 @@ city_repository.save(city4)
 # country_repository.delete(3)
 
 # city_repository.select_all()
-
+country_repository.select_all()
 
 
 

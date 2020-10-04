@@ -11,6 +11,15 @@ def save(country):
     country.id = id
     return country
 
+def select_all():
+    countries = []
+    sql = "SELECT * FROM countries"
+    results = run_sql(sql)
+
+    for row in results:
+        country = Country(row['name'], row['id'])
+        countries.append(country)
+    return countries
 
 
 def delete_all():

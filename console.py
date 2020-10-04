@@ -5,8 +5,8 @@ from models.city import City
 import repositories.city_repository as city_repository
 import repositories.country_repository as country_repository
 
-city_repository.delete_all()
-country_repository.delete_all()
+# city_repository.delete_all()
+# country_repository.delete_all()
 
 country1 = Country("China")
 country_repository.save(country1)
@@ -28,7 +28,7 @@ city_repository.save(city4)
 # country_repository.delete(3)
 
 # city_repository.select_all()
-country_repository.select_all()
+# country_repository.select_all()
 
 
 

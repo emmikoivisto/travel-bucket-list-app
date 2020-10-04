@@ -6,10 +6,20 @@
     <title>Travel Bucket List</title>
 </head>
 <body>
-    <h1>My travel bucket list</h1>
-    <div>
-        {% block container %}
-        {% endblock %}
-    </div>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="/list-destinations">List of Destinations</a></li>
+                <li><a href="/list-countries">List of Countries</a></li>
+                <li><a href="/list-destinations/new">Add New Destination</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Travel bucket list</h1>
+        {% block content %}
+
+        
+        {% endblock content %}
 </body>
 </html>

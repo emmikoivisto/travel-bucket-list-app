@@ -3,6 +3,7 @@ from db.run_sql import run_sql
 from models.city import City
 from models.country import Country
 
+
 def save(country):
     sql = "INSERT INTO countries (name) VALUES (%s) RETURNING *"
     values = [country.name]
@@ -25,7 +26,7 @@ def select(id):
     country = None
     sql = "SELECT * FROM countries WHERE id = %s"
     values = [id]
-    result = run_sql(sql, values)
+    result = run_sql(sql, values)[0]
 
     if result is not None:
         country = Country(result['name'], result['id'])
@@ -46,14 +47,16 @@ def update(country):
     values = [country.name, country.id]
     run_sql(sql, values)
 
-def cities(country):
-    cities = []
 
-    sql = "SELECT * FROM cities WHERE country_id = %s"
-    values = [country.id]
-    results = run_sql(sql, values)
 
-    for row in results:
-        city = City(row['name'], row['country_id'], row['visited'], row['id'])
-        cities.append(city)
-    return cities
+# def cities(country):
+#     cities = []
+
+#     sql = "SELECT * FROM cities WHERE country_id = %s"
+#     values = [country.id]
+#     results = run_sql(sql, values)
+
+#     for row in results:
+#         city = City(row['name'], country, row['visited'], row['id'])
+#         cities.append(city)
+#     return cities

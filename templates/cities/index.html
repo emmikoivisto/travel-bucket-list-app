@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Destinations</h1>
+
+{% for city in all_cities %}
+    <div class="city">
+        <div class="content">
+            {{city.name}}
+            </div>
+        </div>
+        
+    </div>
+    
+{% endfor %}
+
+{% endblock content %}

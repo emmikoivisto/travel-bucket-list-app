@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add a new country</h1>
+
+<form action="/list-countries" method="post">
+    <div>
+        <label for="name">Country name:</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <button type="submit">Add Country</button>
+
+</form>
+
+{% endblock%}
+

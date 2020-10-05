@@ -1,17 +1,17 @@
 {% extends "base.html" %}
-{% block content %}
 
-<form action="/list-destinations" method="post">
+{% block content %}
+<form action="/list-destinations/{{city.id}}/edit" method="post">
     <div>
         <label for="name">City name:</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" value={{city.name}}>
     </div>
-
+    
     <div>
         <label for="country">Country:</label>
         <select name="country_id" id="country_id">
-            {% for country in all_countries %}
-            <option value="" disabled selected hidden >Choose country</option>
+            {% for country in countries %}
+            <option value="" disabled selected hidden>Choose country</option>
             <option value="{{ country.id }}">{{ country.name }} </option>
             {% endfor %}
         </select>
@@ -25,8 +25,9 @@
         </select>
     </div>
 
-    <button type="submit">Add Destination</button>
 
+    <button type="submit">Update Destination</button>
 </form>
+
 
 {% endblock %}

@@ -7,8 +7,18 @@
 {% for city in all_cities %}
     <div class="city">
         <div class="content">
-            {{city.name}}
+            <h3><a href="list-destinations/{{city.id}}">{{city.name}}</a></h3>
+            <p>{{city.country.name}}</p>
+            <p>{{city.visited}}</p>
             </div>
+            <form action="/list-destinations/{{city.id}}/edit">
+                <input type="submit" value="Edit">
+            </form>
+        
+            <form action="/list-destinations/{{city.id}}/delete" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+
         </div>
         
     </div>

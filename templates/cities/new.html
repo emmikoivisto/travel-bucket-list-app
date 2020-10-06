@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<section class="form-container"> 
 <form action="/list-destinations" method="post">
     <div>
         <label for="name">City name:</label>
@@ -25,8 +26,8 @@
         </select>
     </div>
 
-    <button type="submit">Add Destination</button>
+    <button type="submit" class="button-update"><i class="fa fa-plus" aria-hidden="true"></i> Add Destination</button>
 
 </form>
-
+</section>
 {% endblock %}

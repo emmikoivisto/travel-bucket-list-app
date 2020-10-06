@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<form action="/list-countries/{{country.id}}" method="post">
+<form action="/list-countries/{{country.id}}" method="post" class="form">
     <div>
         <label for="name">Country name:</label>
         <input type="text" name="name" id="name" value={{country.name}}>
     </div>
     
-    <button type="submit">Update</button>
+    <button class="button-update" type="submit"><i class="fa fa-pencil" aria-hidden="true"></i> Update</button>
 </form>
 
 {% endblock %}

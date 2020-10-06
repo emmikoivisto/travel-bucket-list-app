@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<div>
+<div class="form">
     <p>{{city.name}}</p>
     <p>{{city.country.name}}</p>
-    <p><a href="/list-destinations/{{city.id}}/edit">Edit</a></p>
+    <p><a class="button-update" href="/list-destinations/{{city.id}}/edit"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a></p>
 
 </div>
 

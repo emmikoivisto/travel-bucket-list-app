@@ -2,27 +2,30 @@
 
 {% block content %}
 
-<h1>Destinations</h1>
 
-{% for city in all_cities %}
-    <div class="city">
-        <div class="content">
-            <h3><a href="list-destinations/{{city.id}}">{{city.name}}</a></h3>
-            <p>{{city.country.name}}</p>
-            <p>{{city.visited}}</p>
-            </div>
-            <form action="/list-destinations/{{city.id}}/edit">
-                <input type="submit" value="Edit">
-            </form>
-        
-            <form action="/list-destinations/{{city.id}}/delete" method="POST">
-                <input type="submit" value="Delete">
-            </form>
+<section class="countries-container">
+<!-- <h1>Destinations</h1> -->
+    <section class="countries-index">
+    {% for city in all_cities %}
+    <div class="city-index-list">
+        <h3><a class="city-link" href="list-destinations/{{city.id}}">{{city.name}}</a></h3>
+        <p>{{city.country.name}}</p>
+        <!-- <p>{{city.visited}}</p> -->
+        {% if city.visited == True %}
+    <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+  {% else %}
+    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+  {% endif %}
 
-        </div>
-        
+    <form action="/list-destinations/{{city.id}}/edit">
+        <input type="submit" value="Edit" class="button-update">
+    </form>
+
+    <form action="/list-destinations/{{city.id}}/delete" method="POST">
+        <input type="submit" value="Delete" class="button-update">
+    </form>
     </div>
-    
-{% endfor %}
-
+    {% endfor %}
+</section>
+</section>
 {% endblock content %}

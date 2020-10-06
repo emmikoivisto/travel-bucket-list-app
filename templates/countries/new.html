@@ -2,17 +2,17 @@
 
 {% block content %}
 
-<h1>Add a new country</h1>
 
-<form action="/list-countries" method="post">
-    <div>
-        <label for="name">Country name:</label>
-        <input type="text" name="name" id="name">
-    </div>
+<section class="form-container">
+    <form action="/list-countries" method="post">
+        <div>
+            <label for="name">Country name:</label>
+            <input type="text" name="name" id="name">
+        </div>
 
-    <button type="submit">Add Country</button>
+        <button type="submit" class="button-update"><i class="fa fa-plus" aria-hidden="true"></i> Add Country</button>
 
-</form>
-
+    </form>
+</section>
 {% endblock%}
 

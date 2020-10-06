@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Travel Bucket List</title>
 </head>
 <body>
     <header>
+        <h1><i class="fa fa-plane" aria-hidden="true" fa-5x></i>  Travel bucket list</h1>
         <nav>
             <ul class="menu">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -18,10 +20,18 @@
             </ul>
         </nav>
     </header>
-    <h1>Travel bucket list</h1>
-        {% block content %}
 
-        
-        {% endblock content %}
+    <main>
+            {% block content %}
+
+            
+            {% endblock content %}
+    </main>
+
+    <footer>
+        <p>Powered by hedgehogs</p>
+    </footer>
+
 </body>
+
 </html>

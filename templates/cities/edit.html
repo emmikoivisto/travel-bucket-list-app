@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<section class="form-container"> 
 <form action="/list-destinations/{{city.id}}" method="post">
     <div>
         <label for="name">City name:</label>
@@ -26,8 +27,8 @@
     </div>
 
 
-    <button type="submit">Update</button>
+    <button class="button-update" type="submit">Update</button>
 </form>
-
+</section>
 
 {% endblock %}

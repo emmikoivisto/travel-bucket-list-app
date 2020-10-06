@@ -1,3 +1,143 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    color: #566270;
+    font-size: 15px;
+    padding: 10px;
+    margin: 0;
+}
+
+body > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 20px; */
+    background-color: #A593E0;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+body > main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
 body > header > nav > ul > li {
     list-style: none;
+    display: inline;
+    justify-content: center;
 }
+
+body > footer {
+    background-color: #A593E0;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #566270;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+
+body > footer > p {
+    justify-content: center;
+    text-align: center;
+    color: #566270;
+    font-family: cursive;
+}
+
+
+body > header > h1 {
+    text-align: center;
+    color: #566270;
+    font-family: cursive;
+}
+
+.countries-container {
+    text-align: center;
+}
+
+.countries-index {
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+    justify-content: center;
+    color: #566270;
+    font-size: 20px;
+}
+
+.city-index-list {
+    /* border: 1px solid black; */
+    display: block;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+
+.button-update {
+    color: #566270;
+    font-size: large;
+    border: 2px solid #A593E0;;
+    border-radius: 12px;
+    padding: 8px;
+    text-decoration: none;
+    background-color: white;
+}
+
+.button-update:hover {
+    background-color: #A593E0;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.update-destination {
+    margin: auto;
+}
+
+.form {
+    text-align: center;
+    font-size: 20px;
+    /* top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -100px; */
+}
+
+section > ul > li {
+    font-size: 30px;
+    list-style: none;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+body > main > section > form {
+    margin: auto;
+}
+
+.city-link {
+    color: #566270;
+}
+

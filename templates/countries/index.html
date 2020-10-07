@@ -2,27 +2,25 @@
 
 {% block content %}
 
-<div class="form">
-
-
-
 <section class="countries-container">
-    <!-- <h1>List of countries</h1> -->
-    {% for country in all_countries %}
     <section class="countries-index">
-        <ul>
-            <li> {{country.name}}</li>
-                <form class="edit" action="/list-countries/{{country.id}}/edit">
-                    <input type="submit" value="Edit" class="button-update">
-
-                </form>
-    
-                <form class="delete-from" action="/list-countries/{{country.id}}/delete" method="POST">
-                    <input type="submit" value="Delete" class="button-update">
-                </form>
-        </ul>
-{% endfor %}
+    {% for country in all_countries %}
+        <div class="city-index-list">
+            <ul>
+                <li> {{country.name}}</li>
+                    <form class="edit" action="/list-countries/{{country.id}}/edit">
+                        <input type="submit" value="Edit" class="button-update">
+                    </form>
+            
+                    <form class="delete-from" action="/list-countries/{{country.id}}/delete" method="POST">
+                        <input type="submit" value="Delete" class="button-update">
+                    </form>
+            </ul>
+         </div>
+        {% endfor %}
     </section>
+    <button class="button-with-link"><a href="/list-countries/new" style="text-decoration: none; color: #566270";>Add New Country</a></button>
 </section>  
-</div>
+
+
 {% endblock content %}

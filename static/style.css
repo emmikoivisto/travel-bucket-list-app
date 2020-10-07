@@ -6,13 +6,13 @@ body {
     font-size: 15px;
     padding: 10px;
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body > header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* padding: 20px; */
     background-color: #A593E0;
     font-size: 20px;
     width: 100%;
@@ -62,11 +62,14 @@ body > footer > p {
 }
 
 
-body > header > h1 {
+.main-title {
     text-align: center;
     color: #566270;
-    font-family: cursive;
+    /* font-family: cursive; */
+    /* text-decoration: none; */
+    font-size: 45px;
 }
+
 
 .countries-container {
     text-align: center;
@@ -96,9 +99,10 @@ body > header > h1 {
     font-size: large;
     border: 2px solid #A593E0;;
     border-radius: 12px;
-    padding: 8px;
+    padding: 5px;
     text-decoration: none;
     background-color: white;
+    margin: 3px;
 }
 
 .button-update:hover {
@@ -107,6 +111,25 @@ body > header > h1 {
     cursor: pointer;
 }
 
+
+.button-with-link {
+    color: #FFFFF3;
+    font-size: large;
+    border: 2px solid #A593E0;
+    border-radius: 12px;
+    padding: 5px;
+    text-decoration-line: none;
+    background-color: #A593E0;
+    margin: 5px;
+
+}
+
+.button-with-link:hover {
+    background-color: #FFFFF3;
+    color: #A593E0;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 
 .update-destination {
@@ -141,3 +164,11 @@ body > main > section > form {
     color: #566270;
 }
 
+.home-page {
+    display: block;
+    align-items: center;
+    text-align: center;
+    /* font-family: cursive; */
+    color: #566270;
+    font-size: medium;
+}

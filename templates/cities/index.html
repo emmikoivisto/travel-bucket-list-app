@@ -13,9 +13,9 @@
         <!-- <p>{{city.visited}}</p> -->
         {% if city.visited == True %}
     <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-  {% else %}
+        {% else %}
     <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-  {% endif %}
+        {% endif %}
 
     <form action="/list-destinations/{{city.id}}/edit">
         <input type="submit" value="Edit" class="button-update">
@@ -27,5 +27,7 @@
     </div>
     {% endfor %}
 </section>
+
+<button class="button-with-link"><a href="/list-destinations/new" style="text-decoration: none; color: #566270";>Add New Destination</a></button>
 </section>
 {% endblock content %}

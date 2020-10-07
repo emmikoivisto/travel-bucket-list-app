@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <title>Travel Bucket List</title>
 </head>
 <body>
     <header>
-        <h1><i class="fa fa-plane" aria-hidden="true" fa-5x></i>  Travel bucket list</h1>
+        <h1 class="main-title"><a href="{{ url_for('home') }}" style="text-decoration: none; color: #566270;"><i class="fa fa-plane" aria-hidden="true" fa-5x></i>TRAVEL BUCKET LIST</a></h1>
         <nav>
             <ul class="menu">
                 <li><a href="{{ url_for('home') }}">Home</a></li>

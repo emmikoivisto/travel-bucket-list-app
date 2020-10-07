@@ -25,11 +25,6 @@ city_repository.save(city3)
 city4 = City("Osaka", country2, True)
 city_repository.save(city4)
 
-# country_repository.delete(3)
-
-# city_repository.select_all()
-# country_repository.select_all()
-
 
 
 pdb.set_trace()

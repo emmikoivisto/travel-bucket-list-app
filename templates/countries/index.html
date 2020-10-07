@@ -7,7 +7,7 @@
     {% for country in all_countries %}
         <div class="city-index-list">
             <ul>
-                <li> {{country.name}}</li>
+                <li class="country-list"> {{country.name}}</li>
                     <form class="edit" action="/list-countries/{{country.id}}/edit">
                         <input type="submit" value="Edit" class="button-update">
                     </form>

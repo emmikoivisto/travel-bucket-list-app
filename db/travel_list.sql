@@ -12,5 +12,3 @@ CREATE TABLE cities (
     visited BOOLEAN,
     country_id INT REFERENCES countries(id) ON DELETE CASCADE
 );
-
--- INSERT INTO cities (city_name, visited) VALUES ('Helsinki', FALSE);

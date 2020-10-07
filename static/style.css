@@ -23,6 +23,7 @@ body > main {
     flex: 1;
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 
@@ -171,4 +172,9 @@ body > main > section > form {
     /* font-family: cursive; */
     color: #566270;
     font-size: medium;
+}
+
+.country-list {
+    list-style: none;
+    font-size: larger;
 }

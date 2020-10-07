@@ -1,0 +1,19 @@
+@media (max-width: 590px) {
+    body > main {
+        width: 70%;
+}
+
+    body > main > header {
+        flex-direction: wrap;
+        margin: auto;
+    }
+
+    body > main > header > nav > ul {
+        flex-flow: wrap;
+    }
+
+    #image {
+        margin: auto;
+        size: auto;
+    }
+}

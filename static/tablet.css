@@ -1,0 +1,13 @@
+@media (min-width: 720px) {
+    body > main {
+        width: 100%;
+    }
+
+    body > footer {
+        flex-direction: row;
+    }
+
+    #image {
+        margin: auto;
+    }
+}
